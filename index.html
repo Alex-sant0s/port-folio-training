@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Portfolio </title>
+</head>
+
+<body>
+    <div class="particulas"></div>
+
+
+
+
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#Inicio" class="menu-link">Inicio</a>
+            </li>
+
+            <li>
+                <a href="#sobre" class="menu-link">Sobre</a>
+            </li>
+
+            <li>
+                <a href="#projetos" class="menu-link">Projetos</a>
+            </li>
+
+            <li>
+                <a href="#contatos" class="menu-link">Contato</a>
+            </li>
+        </ul>
+    </nav>
+    <main id="Inicio" class="cabecalho">
+        <div>
+            <img src="./img/lindo eu.jpg" alt="Foto De Perfil" class="foto-perfil">
+            <h1>Alex Santos</h1>
+            <p class="cabecalho-sub-titulo">Desenvolvedor Jr</p>
+        </div>
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre Mim</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">
+                Olá! Me chamo Alex, tenho 24 anos e estou em busca de uma nova oportunidade de trabalho, seja no formato
+                remoto ou semipresencial.
+            </p>
+
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+        <div class="projetos-caixa">
+
+            <div class="projetos-card">
+                <img src="./img/portfolio-pricipal.png" alt="Projeto 1" class="projetos-imagem">
+                <div class="caixa-textos-projeto">
+                    <h3 class="info-projetos">Port-fólio</h3>
+                    <p class="paragrafo-projetos">Aqui esta um projeto meu para me conhecerem melhor.</p>
+                    <a href="https://portfolio-att.netlify.app/" target="_blank">Link</a>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img src="./img/calcular IMC.png" alt="Projeto 1" class="projetos-imagem">
+                <div class="caixa-textos-projeto">
+                    <h3 class="info-projetos">Calcular IMC </h3>
+                    <p class="paragrafo-projetos">Fiz esse projeto de calcular IMC para praticar meu conhecimento. caso
+                        queira testar, fique a vontate.</p>
+                    <a href="https://alex-sant0s.github.io/Calcular-IMC-/" target="_blank">Link</a>
+                    
+                    
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img src="./img/projeto-card.png" alt="Projeto 1" class="projetos-imagem">
+                <div class="caixa-textos-projeto">
+                    <h3 class="info-projetos">Loja de Carros</h3>
+                    <p class="paragrafo-projetos">Loja de carro automotiva e responsiva feita com html,css e js.</p>
+                        <a href="https://precious-heliotrope-edd878.netlify.app/" target="_blank">Link</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulos">Entrar Em Contato</h2>
+
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+            <div class="grupo-form">
+                <input placeholder="Nome" class="campo-form" id="nome">
+            </div>
+            <div clas=grupo-form>
+                <textarea class="campo-form" placeholder="Digite sua mensagem" rows="6" id="mensagem"></textarea>
+            </div>
+
+            <button type="submit" class="botao-form">Enviar WhathsApp</button>
+        </form>
+    </section>
+
+    <script>
+        function enviarWhats(event) {
+            event.preventDefault()
+
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem');
+            const telefone = '#'
+
+            const texto = `Ola! Me Chamo ${nome}, ${mensagem}`
+            const msgFormatada = encodeURIComponent(texto)
+
+            const url = `#`
+
+            console.log(url)
+
+            window.open(url, '_blank')
+        }
+    </script>
+</body>
+
+</html>
